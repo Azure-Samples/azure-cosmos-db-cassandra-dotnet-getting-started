@@ -1,57 +1,45 @@
-# Project Name
+---
+services: cosmos-db
+platforms: dotnet
+author: mojind
+---
 
-(short, 1-3 sentenced, description of the project)
+# Developing a Dotnet app with Cassandra API using Azure Cosmos DB
+Azure Cosmos DB is Microsoft's globally distributed multi-model database service. You can quickly create and query document, table, key-value, and graph databases, all of which benefit from the global distribution and horizontal scale capabilities at the core of Azure Cosmos DB. 
+This quick start demonstrates how to create an Azure Cosmos DB account for the Cassandra API by using the Azure portal. You'll then build a user profile console app, output as shown in the following image, with sample data.
 
-## Features
+## Running this sample
+* Before you can run this sample, you must have the following perquisites:
+	* An active Azure Cassandra API account - If you don't have an account, refer to the [Create Cassandra API account](https://github.com/mimig1/azure-docs-pr/blob/cassandra/includes/cosmos-db-create-dbaccount-cassandra.md). 
+	* [Microsoft Visual Studio](https://www.visualstudio.com).
+	* [Git](http://git-scm.com/).
 
-This project framework provides the following features:
+1. Clone this repository using `git clone https://github.com/Azure-Samples/azure-cosmos-db-cassandra-dotnet-getting-started.git`
 
-* Feature 1
-* Feature 2
-* ...
+2. Open the CassandraQuickStartSample.sln solution and install the Cassandra .NET driver. Use the .NET Driver's NuGet package. From the Package Manager Console window in Visual Studio:
 
-## Getting Started
+```bash
+PM> Install-Package CassandraCSharpDriver
+```
 
-### Prerequisites
+3. Next, configure the endpoints in **Program.cs**
 
-(ideally very short, if any)
+```
+private const string UserName = "<FILLME>"; 
+private const string Password = "<FILLME>";
+private const string CassandraContactPoint = "<FILLME>"; //  DnsName
+```
+4. Compile and Run the project.
 
-- OS
-- Library version
-- ...
+5. Output Image: 
 
-### Installation
+![User Data](/img.PNG?raw=true "user data")
 
-(ideally very short)
+## About the code
+The code included in this sample is intended to get you quickly started with a C# application using Cassandra C# driver that connects to Azure Cosmos DB with the Cassandra API.
 
-- npm install [package name]
-- mvn install
-- ...
+## More information
 
-### Quickstart
-(Add steps to get up and running quickly)
-
-1. git clone [repository clone url]
-2. cd [respository name]
-3. ...
-
-
-## Demo
-
-A demo app is included to show how to use the project.
-
-To run the demo, follow these steps:
-
-(Add steps to start up the demo)
-
-1.
-2.
-3.
-
-## Resources
-
-(Any additional resources or related projects)
-
-- Link to supporting information
-- Link to similar sample
-- ...
+- [Azure Cosmos DB](https://docs.microsoft.com/azure/cosmos-db/introduction)
+- [Cassandra DB](http://cassandra.apache.org/)
+- [DataStax Cassandra C#](https://academy.datastax.com/resources/getting-started-apache-cassandra-and-c-net)
