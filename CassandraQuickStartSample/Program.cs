@@ -9,10 +9,10 @@ namespace CassandraQuickStartSample
 {
     public class Program
     {
-        // Cassandra Cluster Configs
+        // Cassandra Cluster Configs      
         private const string UserName = "<FILLME>"; 
         private const string Password = "<FILLME>";
-        private const string CassandraContactPoint = "<FILLME>"; //  DnsName
+        private const string CassandraContactPoint = "<FILLME>";  // DnsName  
         private static int CassandraPort = 10350;
 
         public static void Main(string[] args)
@@ -23,8 +23,9 @@ namespace CassandraQuickStartSample
             Cluster cluster = Cluster.Builder().WithCredentials(UserName, Password).WithPort(CassandraPort).AddContactPoint(CassandraContactPoint).WithSSL(options).Build();
             ISession session = cluster.Connect();
 
-            // Creating KeySpace and table           
-            session.Execute("CREATE KEYSPACE IF NOT EXISTS uprofile WITH REPLICATION = { 'class' : 'SimpleStrategy', 'replication_factor' : 3 }");
+            // Creating KeySpace and table
+            session.Execute("DROP KEYSPACE IF EXISTS uprofile");
+            session.Execute("CREATE KEYSPACE uprofile WITH REPLICATION = { 'class' : 'SimpleStrategy', 'replication_factor' : 3 }");
             Console.WriteLine(String.Format("created keyspace uprofile"));
             session.Execute("CREATE TABLE IF NOT EXISTS uprofile.user (user_id int PRIMARY KEY, user_name text, user_bcity text)");
             Console.WriteLine(String.Format("created table user"));
@@ -38,7 +39,7 @@ namespace CassandraQuickStartSample
             mapper.Insert<User>(new User(3, "IvanH", "Mumbai"));
             mapper.Insert<User>(new User(4, "LiliyaB", "Seattle"));
             mapper.Insert<User>(new User(5, "JindrichH", "Buenos Aires"));
-            Console.WriteLine("Iinserted data into user table");
+            Console.WriteLine("Inserted data into user table");
 
             Console.WriteLine("Select ALL");
             Console.WriteLine("-------------------------------");
@@ -51,6 +52,10 @@ namespace CassandraQuickStartSample
             Console.WriteLine("-------------------------------");
             User userId3 = mapper.FirstOrDefault<User>("Select * from user where user_id = ?", 3);
             Console.WriteLine(userId3);
+
+            // Clean up of Table and KeySpace
+            session.Execute("DROP table user");
+            session.Execute("DROP KEYSPACE uprofile");
 
             // Wait for enter key before exiting  
             Console.ReadLine();
