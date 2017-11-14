@@ -25,7 +25,7 @@ namespace CassandraQuickStartSample
 
             // Creating KeySpace and table
             session.Execute("DROP KEYSPACE IF EXISTS uprofile");
-            session.Execute("CREATE KEYSPACE uprofile WITH REPLICATION = { 'class' : 'SimpleStrategy', 'replication_factor' : 3 }");
+            session.Execute("CREATE KEYSPACE uprofile WITH REPLICATION = { 'class' : 'NetworkTopologyStrategy', 'datacenter1' : 1 };");
             Console.WriteLine(String.Format("created keyspace uprofile"));
             session.Execute("CREATE TABLE IF NOT EXISTS uprofile.user (user_id int PRIMARY KEY, user_name text, user_bcity text)");
             Console.WriteLine(String.Format("created table user"));
