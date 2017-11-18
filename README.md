@@ -10,7 +10,7 @@ This quick start demonstrates how to create an Azure Cosmos DB account for the C
 
 ## Running this sample
 * Before you can run this sample, you must have the following perquisites:
-	* An active Azure Cassandra API account - If you don't have an account, refer to the [Create Cassandra API account](https://github.com/mimig1/azure-docs-pr/blob/cassandra/includes/cosmos-db-create-dbaccount-cassandra.md). 
+	* An active Azure Cassandra API account - If you don't have an account, refer to the [Create Cassandra API account](https://docs.microsoft.com/en-us/azure/cosmos-db/create-cassandra-dotnet). 
 	* [Microsoft Visual Studio](https://www.visualstudio.com).
 	* [Git](http://git-scm.com/).
 
