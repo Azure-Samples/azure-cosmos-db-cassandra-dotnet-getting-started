@@ -42,4 +42,3 @@ The code included in this sample is intended to get you quickly started with a C
 
 - [Azure Cosmos DB](https://docs.microsoft.com/azure/cosmos-db/introduction)
 - [Cassandra DB](http://cassandra.apache.org/)
-- [DataStax Cassandra C#](https://academy.datastax.com/resources/getting-started-apache-cassandra-and-c-net)
