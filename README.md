@@ -1,7 +1,11 @@
 ---
-services: cosmos-db
-platforms: dotnet
-author: mojind
+page_type: sample
+languages:
+- csharp
+products:
+- azure
+description: "Azure Cosmos DB is Microsoft's globally distributed multi-model database service"
+urlFragment: azure-cosmos-db-cassandra-dotnet-getting-started
 ---
 
 # Developing a Dotnet app with Cassandra API using Azure Cosmos DB
