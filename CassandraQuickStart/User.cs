@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace CassandraQuickStartSample
+namespace CassandraQuickStart
 {
     /**
      * User table entity class

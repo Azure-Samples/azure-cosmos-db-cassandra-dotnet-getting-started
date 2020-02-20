@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29806.167
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CassandraQuickStartSample", "CassandraQuickStartSample\CassandraQuickStartSample.csproj", "{40167243-4E4E-4381-8941-ADC1709F3FAD}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CassandraQuickStart", "CassandraQuickStart\CassandraQuickStart.csproj", "{E6C15077-7C43-4E69-92C1-721C013DF505}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,12 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{40167243-4E4E-4381-8941-ADC1709F3FAD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{40167243-4E4E-4381-8941-ADC1709F3FAD}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{40167243-4E4E-4381-8941-ADC1709F3FAD}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{40167243-4E4E-4381-8941-ADC1709F3FAD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E6C15077-7C43-4E69-92C1-721C013DF505}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E6C15077-7C43-4E69-92C1-721C013DF505}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E6C15077-7C43-4E69-92C1-721C013DF505}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E6C15077-7C43-4E69-92C1-721C013DF505}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6454C080-2F93-4002-8D6A-E043A5C71DD2}
 	EndGlobalSection
 EndGlobal

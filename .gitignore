@@ -93,6 +93,9 @@ ipch/
 *.vspx
 *.sap
 
+# VS Code
+.vscode/
+
 # TFS 2012 Local Workspace
 $tf/
 
